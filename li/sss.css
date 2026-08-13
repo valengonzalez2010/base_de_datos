@@ -1,0 +1,33 @@
+
+.Presentacion{
+    background-color: rgb(234, 218, 154);
+    width: 350px;
+   
+   
+}
+
+
+.Titulo{
+    background-color: rgb(184, 176, 156);
+    text-align: center;
+   
+
+
+}
+
+
+.Texto{
+    background-color: burlywood;
+    text-align: center;
+}
+
+
+#ImgPulseras,
+#ImgAuriculares,
+#ImgManualidades{
+    width: 200px;
+    display: block;
+    margin: auto;
+   
+}
+
