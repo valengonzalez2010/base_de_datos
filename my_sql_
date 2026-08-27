@@ -1,0 +1,75 @@
+create database Carniceria;
+use Carniceria;
+
+create table Carniceros(
+ID_Carnicero int auto_increment primary key,
+Nombre varchar(20),
+Apellido varchar(35),
+DNI int(8)
+);
+
+create table Categorias(
+ID_Categoria int auto_increment primary key,
+Nombre varchar(20)
+);
+create table Productos(
+ID_Producto int auto_increment primary key,
+Corte varchar(50),
+Precio decimal(10,2),
+ID_Categoria int,
+foreign key (ID_Categoria) references Categorias(ID_Categoria)
+);
+
+create table clientes(
+ID_Cliente int auto_increment primary key,
+Nombre varchar(20),
+Telefono varchar(10)
+);
+
+create table Medios_Pagos(
+ID_Medio_Pago int auto_increment primary key,
+Nombre varchar(20)
+);
+
+create table Ventas(
+ID_Venta int auto_increment primary key,
+ID_Medio_Pago int,
+ID_Cliente int,
+ID_Carnicero int,
+ID_Producto int, 
+foreign key (ID_Medio_Pago) references Medios_Pagos(ID_Medio_Pago),
+foreign key (ID_Cliente) references Clientes(ID_Cliente),
+foreign key (ID_Carnicero) references Carniceros(ID_Carnicero),
+foreign key (ID_Producto) references  Productos(ID_Producto)
+);
+
+create table Ventas_Productos(
+ID_Venta_Producto int auto_increment primary key,
+ID_Venta int,
+ID_Producto int,
+foreign key(ID_Venta) references Ventas(ID_Venta),
+foreign key(ID_Producto) references Productos(ID_Producto)
+);
+insert into Carniceros(Nombre, Apellido,DNI) values
+("Jeremias","Montiel",90128490),
+("Facundo","Moron",30493494),
+("Rodrigo","Martinez",12738127);
+insert into Categorias(Nombre) values
+("Carne de Pollo"),
+("Carne de Vaca"),
+("Carne de Cerdo");
+insert into Productos(Corte, Precio, ID_Categoria)values
+("Cuadrada",20000.00,3),
+("Paleta",23000.00,1),
+("Carne Picada",34000.00,2);
+insert into Clientes(Nombre, Apellido,Telefono) values
+("Sofia","Gimenez","1134567890"),
+("Josefina","Hernandez","1123435674"),
+("Claudia","Sheinbaum","1167679779");
+insert into Medios_Pagos(Nombre) values
+("Efectivo"),
+("Transferencia"),
+("Tarjeta");
+insert into Ventas(ID_Medios_Pagos,ID_Cliente, ID_Carnicero,ID_Producto) values
+
+insert into Ventas_Productos(ID_Venta,ID_Producto) values
