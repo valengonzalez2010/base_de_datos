@@ -1,0 +1,46 @@
+:root {
+  --celeste: #cfe9f1;
+  --beige: #f5f0e4;
+  --durazno_suave: #fff7e9
+  --texto: #3c4a52;
+}
+
+.dot { width: 12px; height: 12px; border-radius: 50%; background: #212529; display: inline-block; }
+.card-tema { border-width: 2px; border-color: #212529; border-radius: 14px; text-decoration: none; color: #212529; }
+.card-tema .card-header { border-bottom-width: 2px; border-color: #212529; font-size: 14px; text-align: center; }
+.card-tema .card-body { min-height: 80px; }
+.seccion-tema { border-top: 3px solid #212529; }
+.img-placeholder { border-right: 2px solid #212529; min-height: 180px; }
+.img-placeholder img { max-width: 100%; height: auto; }
+ 
+header h1 {
+  background: var(--celeste);
+  color: var(--texto);
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 8px;
+}
+ 
+
+.seccion-tema h4 {
+  background: var(--celeste);
+  color: var(--texto);
+  text-align: center;
+  padding: 14px 0;
+  border-bottom: 3px solid #212529;
+}
+ 
+.seccion-tema h5,
+.seccion-tema h6 {
+  background: var(--beige);
+  color: var(--texto);
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+footer {
+  background: var(--durazno_suave);
+  border-top: 3px solid var(--celeste);
+}
+ 
